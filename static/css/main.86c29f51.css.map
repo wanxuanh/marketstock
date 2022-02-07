@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.86c29f51.css","mappings":"AAAA,KACE,sBAAuB,CACvB,iBACF,CAEA,YACE,WACF,CAEA,iBACE,WACF","sources":["index.css"],"sourcesContent":[".App {\n  font-family: sans-serif;\n  text-align: center;\n}\n\n.movie-data {\n  margin: 20px;\n}\n\ninput#movieTitle {\n  margin: 10px;\n}\n"],"names":[],"sourceRoot":""}
