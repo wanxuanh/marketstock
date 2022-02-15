@@ -46,8 +46,8 @@ function App() {
        </div>
       <Form handleSubmit={handleSubmit} />
       <StockInfo stocks={StockData} />
-      <div>{JSON.stringify(StockData)}</div>
       <Outlet />
+      {/* <div>{JSON.stringify(StockData)}</div> */}
     </div>
   );
 }
