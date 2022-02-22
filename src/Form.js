@@ -21,8 +21,9 @@ function Form(props) {
       <form onSubmit={handleSubmit}>
         <label htmlFor="StockTitle"></label>
         <input
-          id="StockTitle"
+          id="userInput"
           type="text"
+          placeholder="Symbol"
           value={StockTitle}
           onChange={handleChange}
         />
