@@ -18,16 +18,16 @@ function Form(props) {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="Form" onSubmit={handleSubmit}>
         <label htmlFor="StockTitle"></label>
         <input
-          id="userInput"
+          id="StockTitle"
           type="text"
           placeholder="Symbol"
           value={StockTitle}
           onChange={handleChange}
         />
-        <input type="submit" value="Check Stock Info" />
+        <input className="Button" type="submit" value="Check Stock Info" />
       </form>
     </>
   );
