@@ -5,3 +5,7 @@ export default function Top10() {
     </main>
   );
 }
+
+//how to show top 10 [max 8 api call per minute]
+//array fixed 10 symbol
+//show charts instead of top10?
