@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Form from "./Form";
 import StockInfo from "./routes/StockInfo";
 import { Outlet, Link } from "react-router-dom";
+import './App.css';
 
 function App() {
   const [StockData, setStockData] = useState("AAPL");
