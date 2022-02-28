@@ -2,17 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-import News from './Pages/News';
+import CompanyInfo from './Pages/CompanyInfo';
 import App from './App';
-import Top10 from "./Pages/Top10";
-import StockInfo from "./Pages/StockInfo";
+import Home from "./Pages/Home";
+import Trade from "./Pages/Trade";
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route path="/news" element={<News />} />
-        <Route path="top10" element={<Top10 />} />
+        <Route path="/companyinfo" element={<CompanyInfo />} />
+        <Route path="/home" element={<Home />} />
       </Route>
       <Route
         path="*"
