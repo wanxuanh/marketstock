@@ -1,7 +1,7 @@
-export default function Top10() {
+export default function Home() {
   return (
     <main style={{ padding: "1rem 0" }}>
-      <h2>Top 10</h2>
+      <h2>Home</h2>
     </main>
   );
 }

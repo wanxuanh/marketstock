@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-import News from './routes/News';
+import News from './Pages/News';
 import App from './App';
-import Top10 from "./routes/Top10"
-import StockInfo from "./routes/StockInfo"
+import Top10 from "./Pages/Top10";
+import StockInfo from "./Pages/StockInfo";
 
 ReactDOM.render(
   <BrowserRouter>

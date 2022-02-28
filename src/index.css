@@ -13,12 +13,12 @@ body {
   font-weight: bold;
   text-decoration: underline;
   font-family: "Trykker", serif;
-  font-size: 22px;
+  font-size: 32px;
 }
-
-.header {
-  background-color: rgb(28, 184, 28);
-  text-align: left;
-  margin: 10px;
-  font-size: xx-large;
+  
+.navbar {
+    background-color: rgb(88, 193, 235);
+    height: fit-content;
+    justify-content: space-around;   
+    display: flex;
 }
