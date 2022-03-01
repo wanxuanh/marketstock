@@ -23,7 +23,7 @@ function Form(props) {
         <input
           id="StockTitle"
           type="text"
-          placeholder="Symbol"
+          placeholder="type Symbol here.."
           value={StockTitle}
           onChange={handleChange}
         />

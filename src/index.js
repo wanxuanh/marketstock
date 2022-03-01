@@ -5,13 +5,13 @@ import './index.css';
 import CompanyInfo from './Pages/CompanyInfo';
 import App from './App';
 import Home from "./Pages/Home";
-import Trade from "./Pages/Trade";
+import Price from "./Pages/Price";
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route path="/trade" element={<Trade />} />
+        <Route path="/price" element={<Price />} />
         <Route path="/companyinfo" element={<CompanyInfo />} />
         <Route path="/home" element={<Home />} />
       </Route>

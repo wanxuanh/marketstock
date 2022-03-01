@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Form from "./components/Form";
-import Trade from "./Pages/Trade";
+import Trade from "./Pages/Price";
 import CompanyInfo from "./Pages/CompanyInfo"
 import { Outlet } from "react-router-dom";
 import "./App.css";
