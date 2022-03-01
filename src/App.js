@@ -20,8 +20,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Form handleSubmit={handleSubmit} />
-      <Trade stockTitle={stockTitle} />
+      {/* <Form handleSubmit={handleSubmit} /> */}
+       {/* <Trade stockTitle={stockTitle} /> */}
       <Outlet />
     </div>
   );

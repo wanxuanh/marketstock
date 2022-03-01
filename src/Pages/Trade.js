@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
+import Form from "../components/Form";
 
 function Trade(props) {
   const [stockData, setStockData] = useState("AAPL");
-  const { stockTitle } = props;
+  const [stockTitle, setStockTitle] = useState("AAPL");
+
+  const handleSubmit = (title) => {
+    console.log("App - handleSubmit - title", title);
+
+    // const title = data.Title;
+    setStockTitle(title);
+  };
 
   useEffect(() => {
     const stockUrl = `https://api.twelvedata.com/time_series?symbol=${stockTitle}&interval=1min&apikey=c1974e7862354751b9df6e7b9b7fe83b`;
@@ -14,6 +22,8 @@ function Trade(props) {
   }, [stockTitle]);
   
   return (
+    <>
+    <Form handleSubmit={handleSubmit} />
     <div className="cards">
       {stockData && stockData.values ? (
         <div>
@@ -35,6 +45,7 @@ function Trade(props) {
         <div></div>
       )}
     </div>
+    </>
   );
 }
 export default Trade;
