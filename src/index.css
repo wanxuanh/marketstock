@@ -9,7 +9,7 @@ body {
 .App a {
   font-family: sans-serif;
   text-align: center;
-  color: white;
+  color: black;
   font-weight: bold;
   text-decoration: underline;
   font-family: "Trykker", serif;
@@ -17,7 +17,7 @@ body {
 }
   
 .navbar {
-    background-color: rgb(88, 193, 235);
+    background-color: white;
     height: fit-content;
     justify-content: space-around;   
     display: flex;

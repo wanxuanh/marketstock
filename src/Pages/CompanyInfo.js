@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import "./CompanyInfo.css";
 import Form from "../components/Form";
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
 
 // const url = `https://api.marketaux.com/v1/news/all?symbols=AAPL&filter_entities=true&language=en&api_token=mGjt5TKsGMalvYt0OMhSQSGhHjVnd9qWpOT9arp8`;
 
@@ -27,21 +33,31 @@ const CompanyInfo = (props) => {
     <>
       <Form handleSubmit={handleSubmit} />
 
-      <div className="CompanyCard">
-        <h2>Company Information</h2>
-        {/* <div>{JSON.stringify(symbol)}</div> */}
-        <img src={symbol.logo} /> <br />
-        Country: {symbol.country} <br />
-        Company Name: {symbol.name} <br />
-        Shares Outstanding: {symbol.shareOutstanding} <br />
-        Market Capitalization: {symbol.marketCapitalization}
-        <br />
-        Industry: {symbol.finnhubIndustry}
-        <br />
-        <button className="button">
-          <a href={symbol.weburl}>Company Website</a>
-        </button>
-      </div>
+      <Card sx={{ maxWidth: 300 }}>
+        <CardActionArea>
+          <CardMedia>
+            {" "}
+            <img src={symbol.logo} />{" "}
+          </CardMedia>
+
+          <CardContent>
+            <Typography gutterBottom variant="h4" component="div">
+              {symbol.name} <br />
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Country: {symbol.country} <br />
+              Shares Outstanding: {symbol.shareOutstanding} <br />
+              Market Capitalization: {symbol.marketCapitalization}
+              <br />
+              Industry: {symbol.finnhubIndustry}
+              <br />
+            </Typography>
+          </CardContent>
+          <button variant="outlined">
+            <a href={symbol.weburl}>Company Website</a>
+          </button>
+        </CardActionArea>
+      </Card>
     </>
   );
 };
