@@ -8,19 +8,27 @@ import Divider from "@mui/material/Divider";
 export default function Home() {
   return (
     <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
-      <h2>Welcome to Stock M App</h2>
-      The stock market is a complex system where shares of publicly-traded
-      companies are issued, bought and sold. There are many factors that
-      determine whether stock prices rise or fall. The actual price of a stock
-      is determined by market activity. When making the decision to buy or sell,
-      the investor will often compare a stock’s actual price to its fair value.
+      <p>
+        The stock market is a complex system where shares of publicly-traded
+        companies are issued, bought and sold. There are many factors that
+        determine whether stock prices rise or fall. <br />
+        The actual price of a stock is determined by market activity. When
+        making the decision to buy or sell, the investor will often compare a
+        stock’s actual price to its fair value.
+      </p>
       <Divider />
-      <List component="nav" aria-label="main mailbox folders">
+      <h3>
+        <i>Quotes from Warren Buffet</i>
+        <br />
+        “Be Fearful When Others Are Greedy and Greedy When Others Are Fearful”
+      </h3>
+      <Divider />
+      <List className="list">
         <ListItemButton>
           <ListItemIcon></ListItemIcon>
           <ListItemText
             primary={
-              <a href="https://www.forbes.com/sites/mikepatton/2015/04/28/five-basics-you-should-definitely-know-about-the-stock-market/?sh=4d54b3b27efa">
+              <a href="https://corporatefinanceinstitute.com/resources/knowledge/trading-investing/stock-market/">
                 What is stock market?
               </a>
             }
@@ -71,6 +79,7 @@ export default function Home() {
           />
         </ListItemButton>
       </List>
+      
     </Box>
   );
 }
