@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './index.css';
-import CompanyInfo from './Pages/CompanyInfo';
-import App from './App';
-import Home from "./Pages/Home";
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./index.css";
+import CompanyInfo from "./Pages/CompanyInfo";
+import App from "./App";
+import About from "./Pages/About";
 import Price from "./Pages/Price";
 
 ReactDOM.render(
@@ -13,7 +13,7 @@ ReactDOM.render(
       <Route path="/" element={<App />}>
         <Route path="/price" element={<Price />} />
         <Route path="/companyinfo" element={<CompanyInfo />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Route>
       <Route
         path="*"

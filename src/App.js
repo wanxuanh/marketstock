@@ -9,7 +9,7 @@ import CompanyInfo from "./Pages/CompanyInfo";
 import { Outlet } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/NavBar";
-import Home from "./Pages/Home";
+import Home from "./Pages/About";
 import image1 from "./finance.jpg";
 
 //const firebaseApp = firebase.initializeApp(firebaseConfig);
