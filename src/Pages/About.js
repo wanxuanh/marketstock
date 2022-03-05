@@ -28,7 +28,10 @@ export default function Home() {
           <ListItemIcon></ListItemIcon>
           <ListItemText
             primary={
-              <a href="https://corporatefinanceinstitute.com/resources/knowledge/trading-investing/stock-market/">
+              <a
+                href="https://corporatefinanceinstitute.com/resources/knowledge/trading-investing/stock-market/"
+                target="_blank"
+              >
                 What is stock market?
               </a>
             }
@@ -39,7 +42,10 @@ export default function Home() {
           <ListItemIcon></ListItemIcon>
           <ListItemText
             primary={
-              <a href="https://www.investopedia.com/articles/basics/06/invest1000.asp">
+              <a
+                href="https://www.investopedia.com/articles/basics/06/invest1000.asp"
+                target="_blank"
+              >
                 How to start investing?
               </a>
             }
@@ -50,7 +56,10 @@ export default function Home() {
           <ListItemIcon></ListItemIcon>
           <ListItemText
             primary={
-              <a href="https://www.fool.com/investing/how-to-invest/stocks/">
+              <a
+                href="https://www.fool.com/investing/how-to-invest/stocks/"
+                target="_blank"
+              >
                 Determining your investing approach
               </a>
             }
@@ -61,7 +70,10 @@ export default function Home() {
           <ListItemIcon></ListItemIcon>
           <ListItemText
             primary={
-              <a href="https://www.thebalance.com/what-are-the-easiest-ways-to-track-my-investments-357627">
+              <a
+                href="https://www.thebalance.com/what-are-the-easiest-ways-to-track-my-investments-357627"
+                target="_blank"
+              >
                 How to track your investment?{" "}
               </a>
             }
@@ -72,14 +84,16 @@ export default function Home() {
           <ListItemIcon></ListItemIcon>
           <ListItemText
             primary={
-              <a href="https://www.singsaver.com.sg/blog/best-robo-advisors-singapore">
+              <a
+                href="https://www.singsaver.com.sg/blog/best-robo-advisors-singapore"
+                target="_blank"
+              >
                 More about Robo-advisor{" "}
               </a>
             }
           />
         </ListItemButton>
       </List>
-      
     </Box>
   );
 }

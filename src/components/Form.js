@@ -23,11 +23,11 @@ function Form(props) {
         <input
           id="StockTitle"
           type="text"
-          placeholder="type Symbol here.."
+          placeholder="type symbol here.."
           value={StockTitle}
           onChange={handleChange}
         />
-        <input className="Button" type="submit" value="Check Stock Info" />
+        <input className="Button" type="submit" value="Search" />
       </form>
     </>
   );

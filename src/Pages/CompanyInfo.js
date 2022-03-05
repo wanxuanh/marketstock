@@ -32,32 +32,33 @@ const CompanyInfo = (props) => {
   return (
     <>
       <Form handleSubmit={handleSubmit} />
+      <div className="gallery">
+        <Card sx={{ maxWidth: 250 }}>
+          <CardActionArea>
+            <CardMedia>
+              {" "}
+              <img src={symbol.logo} />{" "}
+            </CardMedia>
 
-      <Card sx={{ maxWidth: 300 }}>
-        <CardActionArea>
-          <CardMedia>
-            {" "}
-            <img src={symbol.logo} />{" "}
-          </CardMedia>
-
-          <CardContent>
-            <Typography gutterBottom variant="h4" component="div">
-              {symbol.name} <br />
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Country: {symbol.country} <br />
-              Shares Outstanding: {symbol.shareOutstanding} <br />
-              Market Capitalization: {symbol.marketCapitalization}
-              <br />
-              Industry: {symbol.finnhubIndustry}
-              <br />
-            </Typography>
-          </CardContent>
-          <button variant="outlined">
-            <a href={symbol.weburl}>Company Website</a>
-          </button>
-        </CardActionArea>
-      </Card>
+            <CardContent>
+              <Typography gutterBottom variant="h4" component="div">
+                {symbol.name} <br />
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Country: {symbol.country} <br />
+                Shares Outstanding: {symbol.shareOutstanding} <br />
+                Market Capitalization: {symbol.marketCapitalization}
+                <br />
+                Industry: {symbol.finnhubIndustry}
+                <br />
+              </Typography>
+            </CardContent>
+            <button variant="outlined">
+              <a href={symbol.weburl}> Website</a>
+            </button>
+          </CardActionArea>
+        </Card>
+      </div>
     </>
   );
 };

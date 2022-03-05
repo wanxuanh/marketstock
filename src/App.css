@@ -2,6 +2,7 @@ body {
   text-align: center;
   color: black;
   font-family: "Trykker", serif;
+  cursor: crosshair;
 }
 
 .App {
@@ -11,40 +12,42 @@ body {
 .cards {
   width: fit-content;
   height: fit-content;
-  background: linear-gradient(#a0e7e5, #b4f8c8);
   margin: 10px;
   padding: 20px;
   border-style: double;
   justify-content: space-evenly;
+  text-align: left;
 }
 
 .Form {
   margin-left: 10px;
   text-align: center;
+  font-size: 14px;
 }
 
 .Button {
   display: inline-block;
   padding: 10px 10px;
-  font-size: 22px;
+  font-size: 15px;
   font-family: "Trykker", serif;
   cursor: pointer;
-  text-align: left;
+  text-align: center;
   text-decoration: none;
-  outline: none;
+  outline:none;
   color: black;
   background-color: #e1e9e2;
   border: none;
   border-radius: 120px;
-  box-shadow: 0 5px #999;
+  box-shadow: 0 5px rgb(255, 255, 255);
 }
 
 .Button:hover {
-  background-color: grey;
+  background-color: rgb(97, 97, 97);
+  color:white;
 }
 
 .Button:active {
-  background-color: #838d83;
+  background-color: #dce2dc;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -53,9 +56,9 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 400px;
+  height: 300px;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1700px;
 }
 
 p {
@@ -67,4 +70,21 @@ p {
 h3 {
   color: grey;
   font-size: medium;
+}
+
+.Footer{
+  background-color: white;
+  color: black;
+  height: 40px;
+  font-size: small;
+  margin-top: 40px;
+}
+
+.gallery{
+  margin:20px;
+}
+
+.table{
+  color: white;
+  background-color: white;
 }

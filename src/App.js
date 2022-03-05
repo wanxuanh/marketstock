@@ -10,7 +10,8 @@ import { Outlet } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/NavBar";
 import Home from "./Pages/About";
-import image1 from "./finance.jpg";
+import image1 from "./Images/finance.jpg";
+import Footer from "./components/Footer"
 
 //const firebaseApp = firebase.initializeApp(firebaseConfig);
 
@@ -41,6 +42,7 @@ function App() {
           <button onClick={signInWithGoogle}>Sign in with Google</button>
           )} */}
       <Outlet />
+      <Footer />
     </div>
   );
 }

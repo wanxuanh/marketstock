@@ -6,6 +6,7 @@ import CompanyInfo from "./Pages/CompanyInfo";
 import App from "./App";
 import About from "./Pages/About";
 import Price from "./Pages/Price";
+import Trending from "./Pages/Trending";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -14,6 +15,7 @@ ReactDOM.render(
         <Route path="/price" element={<Price />} />
         <Route path="/companyinfo" element={<CompanyInfo />} />
         <Route path="/about" element={<About />} />
+        <Route path="/trending" element={<Trending />} />
       </Route>
       <Route
         path="*"
