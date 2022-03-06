@@ -10,9 +10,9 @@ function Navbar() {
         </Link>{" "}
         {""}
         <Link to="/about">| About| </Link> {""}
+        <Link to="/trending">| Trending |</Link> {""}
         <Link to="/companyinfo">| Company Info | </Link> {""}
         <Link to="/price">| Price |</Link> {""}
-        <Link to="/trending">| Trending |</Link> {""}
       </div>
     </nav>
   );

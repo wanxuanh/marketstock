@@ -8,13 +8,13 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 function Price(props) {
-  const [stockData, setStockData] = useState("AAPL");
+  const [stockData, setStockData] = useState("");
   const [stockTitle, setStockTitle] = useState("AAPL");
 
   // const [searchParams, setSearchParams] = useSearchParams();
 
   const handleSubmit = (title) => {
-    console.log("App - handleSubmit - title", title);
+    //console.log("App - handleSubmit - title", title);
     // const title = data.Title;
     setStockTitle(title);
     // setSearchParams({ stock: stockTitle });

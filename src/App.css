@@ -6,7 +6,7 @@ body {
 }
 
 .App {
-  font-size: 32px;
+  font-size: 25px;
 }
 
 .cards {
@@ -85,6 +85,6 @@ h3 {
 }
 
 .table{
-  color: white;
+  color: black;
   background-color: white;
 }

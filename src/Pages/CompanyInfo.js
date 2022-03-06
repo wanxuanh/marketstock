@@ -15,7 +15,7 @@ const CompanyInfo = (props) => {
   const [stockTitle, setStockTitle] = useState("AAPL");
 
   const handleSubmit = (title) => {
-    console.log("App - handleSubmit - title", title);
+    //console.log("App - handleSubmit - title", title);
 
     // const title = data.Title;
     setStockTitle(title);

@@ -3,7 +3,7 @@ function Footer() {
     <div className="Footer">
       || wxuanh || Stock M App ||
       <br />
-      Special thanks to twelvedata and finnhub.io!
+      API: twelvedata, finnhub.io, financialmodelingprep
     </div>
   );
 }
