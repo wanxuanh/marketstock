@@ -1,7 +1,7 @@
 # Stock M App
 
 Developed using React framework with 
-Components, State properties, setState, react-router, useEffect,
+Components, State properties, setState, react-router[useSearchParams,Location,Navigate], useEffect,
     
 Used 3rd party API
 https://twelvedata.com/
@@ -15,7 +15,7 @@ https://www.figma.com/file/MjbYTkXm7sRmeD0KKbyDsR/SEI-P2?node-id=0%3A1
 # Project Overview
 
 Stock M App allows you to pull in information on stocks and read up on their company website.
-With the trending page, get up to date information.
+With the trending page, users can get up to date information.
 
 As Warren Buffet says, “Be Fearful When Others Are Greedy and Greedy When Others Are Fearful”
 
