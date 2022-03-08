@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -31,7 +32,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 function Trending() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [items, setItems] = useState([]);
+  const [item, setItems] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(
@@ -61,7 +63,7 @@ function Trending() {
       <>
         <div className="table">
           Technology Sector
-          <br/>
+          <br />
           [Top 100 stock]
           <TableContainer align="center" component={Paper}>
             <Table sx={{ maxWidth: 700 }} aria-label="customized table">
@@ -75,10 +77,12 @@ function Trending() {
                 </StyledTableRow>
               </TableHead>
               <TableBody>
-                {items.map((item) => (
+                {item.map((item) => (
                   <TableRow key={item.id}>
-                    <TableCell>{item.companyName}</TableCell>{" "}
-                    <TableCell>{item.symbol}</TableCell>{" "}
+                    <StyledTableCell>{item.companyName}</StyledTableCell>{" "}
+                    <TableCell>
+                      <Link to={`/trending/${item.symbol}`}>{item.symbol}</Link>
+                    </TableCell>{" "}
                     <TableCell>{item.marketCap}</TableCell>{" "}
                     <TableCell>{item.industry}</TableCell>{" "}
                   </TableRow>

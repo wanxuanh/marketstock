@@ -16,6 +16,7 @@ ReactDOM.render(
         <Route path="/companyinfo" element={<CompanyInfo />} />
         <Route path="/about" element={<About />} />
         <Route path="/trending" element={<Trending />} />
+        <Route path="/trending/:symbol" element={<Trending/>}/>
       </Route>
       <Route
         path="*"
