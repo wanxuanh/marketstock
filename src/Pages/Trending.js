@@ -62,9 +62,9 @@ function Trending() {
     return (
       <>
         <div className="table">
-          Technology Sector
+          Trending
           <br />
-          [Top 100 stock]
+          Technology Sector [Top 100 stock]
           <TableContainer align="center" component={Paper}>
             <Table sx={{ maxWidth: 700 }} aria-label="customized table">
               {" "}
@@ -81,7 +81,9 @@ function Trending() {
                   <TableRow key={item.id}>
                     <StyledTableCell>{item.companyName}</StyledTableCell>{" "}
                     <TableCell>
-                      <Link to={`/trending/${item.symbol}`}>{item.symbol}</Link>
+                      <Link to={`/price?stock=${item.symbol}`}>
+                        {item.symbol}
+                      </Link>
                     </TableCell>{" "}
                     <TableCell>{item.marketCap}</TableCell>{" "}
                     <TableCell>{item.industry}</TableCell>{" "}

@@ -13,10 +13,11 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="/price" element={<Price />} />
+        <Route path="/price/:symbol" element={<Price />} />
         <Route path="/companyinfo" element={<CompanyInfo />} />
         <Route path="/about" element={<About />} />
         <Route path="/trending" element={<Trending />} />
-        <Route path="/trending/:symbol" element={<Trending/>}/>
+        <Route path="/trending/:symbol" element={<Trending />} />
       </Route>
       <Route
         path="*"

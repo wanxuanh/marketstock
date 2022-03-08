@@ -41,7 +41,9 @@ function App() {
         ) : (
           <button onClick={signInWithGoogle}>Sign in with Google</button>
           )} */}
-      <Outlet />
+      <div className="main-body">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

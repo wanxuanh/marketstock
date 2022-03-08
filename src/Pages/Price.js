@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Form from "../components/Form";
-// import { searchParams, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { searchParams, useSearchParams } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -9,25 +10,25 @@ import Typography from "@mui/material/Typography";
 
 function Price(props) {
   const [stockData, setStockData] = useState("");
-  const [stockTitle, setStockTitle] = useState("AAPL");
 
-  // const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
 
   const handleSubmit = (title) => {
     //console.log("App - handleSubmit - title", title);
     // const title = data.Title;
-    setStockTitle(title);
-    // setSearchParams({ stock: stockTitle });
+    setSearchParams({"stock":title});
   };
 
   useEffect(() => {
-    const stockUrl = `https://api.twelvedata.com/time_series?symbol=${stockTitle}&interval=1min&apikey=c1974e7862354751b9df6e7b9b7fe83b`;
+    const stockUrl = `https://api.twelvedata.com/time_series?symbol=${searchParams.get("stock")}&interval=1min&apikey=c1974e7862354751b9df6e7b9b7fe83b`;
     //check for .length = 0 dont run use effect
 
+    // setSearchParams({ stock: stockTitle });
     fetch(stockUrl)
       .then((res) => res.json())
       .then((data) => setStockData(data)); //.then resolving a promise
-  }, [stockTitle]);
+  }, [location]);
 
   return (
     <>
@@ -39,8 +40,8 @@ function Price(props) {
             {stockData && stockData.values ? (
               <div>
                 <Typography variant="h4" component="div">
-                  {stockData.meta.symbol}<br/>
-                   ${stockData.values[0].close} <br />{" "}
+                  {stockData.meta.symbol}
+                  <br />${stockData.values[0].close} <br />{" "}
                 </Typography>
                 <Typography variant="body2">
                   {" "}
@@ -55,7 +56,7 @@ function Price(props) {
             )}
           </CardContent>
           <CardActions>
-            <Button size="small">Calculate</Button>
+            {/* <Button size="small">Calculate</Button> */}
           </CardActions>
         </Card>
       </div>
