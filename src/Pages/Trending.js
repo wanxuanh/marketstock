@@ -79,7 +79,11 @@ function Trending() {
               <TableBody>
                 {item.map((item) => (
                   <TableRow key={item.id}>
-                    <StyledTableCell>{item.companyName}</StyledTableCell>{" "}
+                    <TableCell>
+                      <Link to={`/companyinfo?stock=${item.symbol}`}>
+                        {item.companyName}
+                      </Link>
+                    </TableCell>{" "}
                     <TableCell>
                       <Link to={`/price?stock=${item.symbol}`}>
                         {item.symbol}

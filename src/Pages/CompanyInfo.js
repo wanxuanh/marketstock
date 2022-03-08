@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./CompanyInfo.css";
 import Form from "../components/Form";
+import { useLocation } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -12,21 +14,23 @@ import { CardActionArea } from "@mui/material";
 
 const CompanyInfo = (props) => {
   const [symbol, setSymbol] = useState([]);
-  const [stockTitle, setStockTitle] = useState("AAPL");
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
 
   const handleSubmit = (title) => {
     //console.log("App - handleSubmit - title", title);
 
     // const title = data.Title;
-    setStockTitle(title);
+    setSearchParams({ stock: title });
   };
 
   useEffect(() => {
-    const url = `https://finnhub.io/api/v1/stock/profile2?symbol=${stockTitle}&token=c8ednbiad3iemqqj7hbg`;
+    const url = `https://finnhub.io/api/v1/stock/profile2?symbol=${searchParams.get("stock")}&token=c8ednbiad3iemqqj7hbg`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setSymbol(data)); //.then resolving a promise
-  }, [stockTitle]);
+  }, [location]);
   // },[props.symbol])
 
   return (

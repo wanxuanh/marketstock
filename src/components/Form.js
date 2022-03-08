@@ -4,14 +4,14 @@ function Form(props) {
   const [StockTitle, setStockTitle] = useState("");
 
   const handleSubmit = (e) => {
-    console.log("Form - handleSubmit - StockTitle", StockTitle);
+   // console.log("Form - handleSubmit - StockTitle", StockTitle);
     e.preventDefault();
     props.handleSubmit(StockTitle);
     setStockTitle("");
   };
 
   const handleChange = (e) => {
-    console.log("handleChange clicked");
+   // console.log("handleChange clicked");
     const title = e.target.value;
     setStockTitle(title);
   };
