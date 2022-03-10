@@ -68,6 +68,10 @@ p {
   background-color: rgb(255, 250, 250);
 }
 
+.about{
+    padding-left: 50px;
+  padding-right: 50px;
+}
 h3 {
   color: grey;
   font-size: medium;
@@ -88,8 +92,15 @@ h3 {
 .table {
   color: black;
   background-color: white;
+  font-size: 24px;
 }
 
 .main-body {
   flex-grow: 1;
+}
+
+.searcht {
+  background-color: black;
+  color: rgb(194, 191, 191);
+  font-size: 14px;
 }

@@ -26,7 +26,9 @@ const CompanyInfo = (props) => {
   };
 
   useEffect(() => {
-    const url = `https://finnhub.io/api/v1/stock/profile2?symbol=${searchParams.get("stock")}&token=c8ednbiad3iemqqj7hbg`;
+    const url = `https://finnhub.io/api/v1/stock/profile2?symbol=${searchParams.get(
+      "stock"
+    )}&token=c8ednbiad3iemqqj7hbg`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setSymbol(data)); //.then resolving a promise
@@ -58,7 +60,10 @@ const CompanyInfo = (props) => {
               </Typography>
             </CardContent>
             <button variant="outlined">
-              <a href={symbol.weburl}> Website</a>
+              <a href={symbol.weburl} target="_blank">
+                {" "}
+                Website
+              </a>
             </button>
           </CardActionArea>
         </Card>

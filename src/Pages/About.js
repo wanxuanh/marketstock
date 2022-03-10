@@ -8,7 +8,7 @@ import Divider from "@mui/material/Divider";
 export default function Home() {
   return (
     <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
-      <p>
+      <p className="about">
         The stock market is a complex system where shares of publicly-traded
         companies are issued, bought and sold. There are many factors that
         determine whether stock prices rise or fall. <br />

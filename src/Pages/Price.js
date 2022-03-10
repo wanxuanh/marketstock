@@ -17,11 +17,13 @@ function Price(props) {
   const handleSubmit = (title) => {
     //console.log("App - handleSubmit - title", title);
     // const title = data.Title;
-    setSearchParams({"stock":title});
+    setSearchParams({ stock: title });
   };
 
   useEffect(() => {
-    const stockUrl = `https://api.twelvedata.com/time_series?symbol=${searchParams.get("stock")}&interval=1min&apikey=c1974e7862354751b9df6e7b9b7fe83b`;
+    const stockUrl = `https://api.twelvedata.com/time_series?symbol=${searchParams.get(
+      "stock"
+    )}&interval=1min&apikey=c1974e7862354751b9df6e7b9b7fe83b`;
     //check for .length = 0 dont run use effect
 
     // setSearchParams({ stock: stockTitle });
@@ -33,7 +35,7 @@ function Price(props) {
   return (
     <>
       <Form handleSubmit={handleSubmit} />
-
+    
       <div className="cards">
         <Card sx={{ minWidth: 275 }}>
           <CardContent>

@@ -29,6 +29,12 @@ function Form(props) {
         />
         <input className="Button" type="submit" value="Search" />
       </form>
+      <div className="searcht">
+        e.g. AMZN / TSLA / AAPL / CRWD / ASAN / NIO / JD <br />
+        <a href="https://stockanalysis.com/stocks/" target="_blank">
+          List of Symbol
+        </a>
+      </div>
     </>
   );
 }
